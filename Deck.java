@@ -1,6 +1,7 @@
 import javafoundations.*;
 import java.util.*;
 import java.io.*;
+import images.*;
 /**
  * This class represents a collection of Cards objects stored in a Stack,
  * using the javafoundations package implementation of ArrayStack
@@ -12,7 +13,8 @@ import java.io.*;
 public class Deck {
     // instance variable
     private ArrayStack<Card> allCards;
-
+    private LinkedList<String> imageNames;
+    
     /**
      * constructor
      */
@@ -26,6 +28,66 @@ public class Deck {
                 allCards.push(new Card("Hearts", i));
             }
         }
+        imageNames = new LinkedList<String>();
+        addImages();
+    }
+    
+    private void addImages() {
+        imageNames.add("AS.png");
+        imageNames.add("2S.png");
+        imageNames.add("3S.png");
+        imageNames.add("4S.png");
+        imageNames.add("5S.png");
+        imageNames.add("6S.png");
+        imageNames.add("7S.png");
+        imageNames.add("8S.png");
+        imageNames.add("9S.png");
+        imageNames.add("10S.png");
+        imageNames.add("JS.png");
+        imageNames.add("QS.png");
+        imageNames.add("KS.png");  
+        
+        imageNames.add("AD.png");
+        imageNames.add("2D.png");
+        imageNames.add("3D.png");
+        imageNames.add("4D.png");
+        imageNames.add("5D.png");
+        imageNames.add("6D.png");
+        imageNames.add("7D.png");
+        imageNames.add("8D.png");
+        imageNames.add("9.png");
+        imageNames.add("10D.png");
+        imageNames.add("JD.png");
+        imageNames.add("QD.png");
+        imageNames.add("KD.png"); 
+        
+        imageNames.add("AC.png");
+        imageNames.add("2C.png");
+        imageNames.add("3C.png");
+        imageNames.add("4C.png");
+        imageNames.add("5C.png");
+        imageNames.add("6C.png");
+        imageNames.add("7C.png");
+        imageNames.add("8C.png");
+        imageNames.add("9C.png");
+        imageNames.add("10C.png");
+        imageNames.add("JC.png");
+        imageNames.add("QC.png");
+        imageNames.add("KC.png"); 
+        
+        imageNames.add("AH.png");
+        imageNames.add("2H.png");
+        imageNames.add("3H.png");
+        imageNames.add("4H.png");
+        imageNames.add("5H.png");
+        imageNames.add("6H.png");
+        imageNames.add("7H.png");
+        imageNames.add("8H.png");
+        imageNames.add("9H.png");
+        imageNames.add("10H.png");
+        imageNames.add("JH.png");
+        imageNames.add("QH.png");
+        imageNames.add("KH.png"); 
     }
 
     /**
