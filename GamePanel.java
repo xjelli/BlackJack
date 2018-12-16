@@ -12,12 +12,11 @@ import java.awt.event.*;
  *  -Add Bet method
  *  -Add Players turns
  *  -Add win/lose conditions
- *  -ect
  *  
  * 
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Maya Igarashi and Jessica Li
+ * @version v1
  */
 public class GamePanel extends JPanel
 {
@@ -74,9 +73,12 @@ public class GamePanel extends JPanel
         JPanel dealerHand = new JPanel();
         dealerHand.setLayout(new GridLayout(1, 7));
         
-        //ImageIcon card1 = new ImageIcon("AS.png");
+        String temp = Dealer.deal();
+        String tempName = Dealer.getDeck.getImageName(temp);
         
-        nHand = new JLabel("(PUT CARDS HERE)", SwingConstants.CENTER);
+        ImageIcon card1 = new ImageIcon(tempName);
+        
+        nHand = new JLabel(card1, SwingConstants.CENTER);
         dealerHand.setBackground(Color.green);
         dealerHand.add(nHand);
         
