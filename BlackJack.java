@@ -5,7 +5,7 @@ import javafoundations.*;
  * Write a description of class BlackJack here.
  *
  * @author Jessica Li
- * @version December 14, 2018
+ * @version December 16, 2018
  */
 public class BlackJack {
     //
@@ -97,9 +97,9 @@ public class BlackJack {
      * 
      */
     public void turnCPU(CPU player) {
-        int valueNeeded = 21-player.sumHand();
+        Card temp = dealer.deal();
         while(player.sumHand() <= 16) {
-            player.hit(dealer.deal());
+            player.hit(temp);
         }
     }
     
@@ -126,8 +126,10 @@ public class BlackJack {
      */
     public void startRound() {
         for(int i = 0; i < players.size(); i++) {
-            players.get(i).hit(dealer.deal());
-            players.get(i).hit(dealer.deal());
+            Card temp1 = dealer.deal();
+            Card temp2 = dealer.deal();
+            players.get(i).hit(temp1));
+            players.get(i).hit(temp2);
             status[i] = players.get(i).stand();
         }
     }
