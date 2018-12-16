@@ -58,15 +58,29 @@ public class GamePanel extends JPanel
         Font baskerville = new Font ("Baskerville", Font.BOLD, 24);
         nLabel.setFont(baskerville);
         
-        nHand = new JLabel("(PUT CARDS HERE)", SwingConstants.CENTER);
-        
-        //Add Cards
-        
+        //nHand = new JLabel("(PUT CARDS HERE)", SwingConstants.CENTER);        
         
         northPanel.add (nLabel);
         northPanel.add(nHand);
 
         return northPanel;
+    }
+    
+    /**
+     * Creates Dealer's hand
+     */
+    private JPanel dealerHand()
+    {
+        JPanel dealerHand = new JPanel();
+        dealerHand.setLayout(new GridLayout(1, 7));
+        
+        //ImageIcon card1 = new ImageIcon("AS.png");
+        
+        nHand = new JLabel("(PUT CARDS HERE)", SwingConstants.CENTER);
+        dealerHand.setBackground(Color.green);
+        dealerHand.add(nHand);
+        
+        return dealerHand;
     }
     
     /**
