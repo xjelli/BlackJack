@@ -107,12 +107,14 @@ public class Deck {
             list.remove(j);
         }
     }
+    
     /**
      * 
      */
     public int sizeOfDeck() {
         return allCards.size();
     }
+    
     /**
      * 
      */
@@ -123,6 +125,14 @@ public class Deck {
             return null;
         }
     }
+    
+    /**
+    *
+    */
+    public String getImageName(Card c) {
+        return imageNames.get(c.getImageNum());
+    }
+    
 
     /**
      * returns a string representation of the deck
